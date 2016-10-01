@@ -1,0 +1,24 @@
+.performance {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.performance-box {
+  padding: 5%;
+}
+
+.performance h5 span {
+  font-size: 5em;
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.performance img {
+  padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .performance-box {
+    margin-top: 5%;
+  }
+}
