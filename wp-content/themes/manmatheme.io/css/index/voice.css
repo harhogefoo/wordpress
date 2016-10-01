@@ -1,0 +1,50 @@
+.voice {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  background-image: url(../../image/index/voice/voice-bg.jpg);
+}
+
+.movie-box {
+  padding: 5%;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.movie-content li {
+  list-style: none;
+}
+
+.movie-content iframe {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.voice-content {
+  padding: 10%;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.voice-content img {
+  width: 140px;
+  height: 140px;
+}
+
+.voice h6 {
+  line-height: 150%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.voice h5 {
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 150%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.voice hr {
+  border-top: 1px solid #5a5a5a;
+}

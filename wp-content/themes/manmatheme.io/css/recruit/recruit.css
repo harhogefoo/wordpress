@@ -1,0 +1,9 @@
+.recruit h4 {
+  text-align: center;
+  -webkit-margin-before: 0.5em;
+}
+
+.recruit p {
+  padding-right: 10%;
+  padding-left: 10%;
+}

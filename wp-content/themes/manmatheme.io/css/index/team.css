@@ -1,0 +1,17 @@
+.team-content {
+  padding: 0 20%;
+}
+
+.team-staff {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.team h6 {
+  padding-top: 10px;
+}
+
+.team p {
+  padding-bottom: 30px;
+}
