@@ -1,15 +1,10 @@
 @media screen and (max-width: 1024px) {
   .keyvisual-text {
   padding-top: 35%; }
-  .about {
-    height: 1000px; }
 
 @media screen and (max-width: 768px) {
   .keyvisual-text {
   margin-top: 35%; }
-
-  .about {
-    height: 1000px; }
 
   .flexslider {
     padding-bottom: 80px; }
@@ -28,13 +23,11 @@
     margin-top: 50%; }
 	  .testimonials p {
     font-size: 12px;  }
-  .about {
-    height: 1000px; }
+
 @media screen and (max-width: 480px) {
 	    .testimonials p {
     font-size: 12px;  }
-  .about {
-    height: 1000px; }
+
 @media screen and (max-width: 320px) {
   .keyvisual-text {
     padding-top: 30%; }

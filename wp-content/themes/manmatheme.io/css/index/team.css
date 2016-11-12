@@ -8,8 +8,15 @@
   height: auto;
 }
 
+.team .section-header {
+ padding-left: 8%;
+ padding-right: 8%;
+}
+
 .team h6 {
   padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .team p {
