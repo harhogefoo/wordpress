@@ -1,1 +1,1 @@
-# wordpress
+# manma-wordpress

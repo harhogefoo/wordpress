@@ -29,10 +29,10 @@
 define('DB_NAME', 'manma-wordpress');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'pompom0c0');
+define('DB_USER', 'manma');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'misala0c0');
+define('DB_PASSWORD', 'amnam');
 
 /** MySQL のホスト名 */
 define('DB_HOST', 'localhost');
