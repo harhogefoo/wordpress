@@ -2,6 +2,14 @@
 <!--------------MainContent--------------->
 <article id="main-content">
 <div class="grid"><!-- GRID MOTHER -->
+<section id="subpage" class="subpage">
+  <div class="text-center text-shadow">
+    <h3 class="subpage-title">MEDIA</h3>
+    <h5 class="subpage-subtitle">メディア掲載</h5>
+  </div>
+</section>
+<section id="media" class="section">
+</section>
 <?php
 if (have_posts()) :
   while (have_posts()) :
