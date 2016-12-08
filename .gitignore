@@ -1,2 +1,6 @@
 .DS_Store
 .htaccess
+.ssh
+.bash*
+.viminfo
+.mysql_history

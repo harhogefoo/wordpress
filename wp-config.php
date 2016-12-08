@@ -83,6 +83,8 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', true);
 
+define('FS_METHOD', 'direct');
+
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
 /** Absolute path to the WordPress directory. */
