@@ -4,15 +4,21 @@ add_action( 'init', 'create_post_type' );
 function create_post_type() {
   $labels = array(
     'name' => __('メディア掲載一覧'), // 表示する投稿タイプ名
-    'singular_name' => __('メディア掲載一覧')
+    'singular_name' => __('メディア掲載一覧'),
+    'add_new' => __('新規追加', 'medias'),
+    'add_new_item' => __('新しいメディア掲載を追加')
   );
 
   $args = array(
     'labels' => $labels,
-    'public' => true,
-    'menu_position' => 5,   // adminページのメニューで表示される優先順位
+    'description' => 'メディア掲載一覧',
     'has_archive' => true,  // リスト一覧ページを表示可能にするか
-    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+    'supports' => array('title', 'excerpt', 'thumbnail', 'custom-fields'),
+    'public' => true,
+    'rewrite' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'menu_position' => 5   // adminページのメニューで表示される優先順位
   );
   register_post_type( 'medias', $args );
 }

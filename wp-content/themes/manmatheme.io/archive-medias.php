@@ -1,3 +1,4 @@
+<!-- メディア掲載一覧ページ -->
 <?php get_header();?>
 <!--------------MainContent--------------->
 <article id="main-content">
@@ -11,6 +12,8 @@
 <section id="media" class="section">
   <div class="container">
     <div class="row">
+
+      <!-- posted contents -->
       <?php
         $loop = new WP_Query(array("post_type" => "medias"));
         if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
@@ -35,12 +38,13 @@
               <span class="media-type"><?php the_title(); ?></span>
             </h5>
             <!-- finish date -->
-            <p class="content-description"><?php the_content(); ?></p>
+            <p class="content-description"><?php the_excerpt(); ?></p>
           </div>
         </a>
       </div>
-
       <?php endwhile; endif; ?>
+      <!-- posted contents -->
+
     </div>
   </div>
 </section>
