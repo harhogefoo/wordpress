@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<!-- キービジュアル -->
 <section id="keyvisual" class="keyvisual section keyvisual-main">
     <div class="col-md-10 col-md-offset-1 text-center">
       <div class="keyvisual-text padding-bottom-20">
@@ -19,11 +21,49 @@
       </ul>
     </div>
 </section>
+
+<!-- 家族留学の新規登録 -->
 <section id="entry" class="entry entry-section text-center">
   <h4>家族留学の新規登録</h4>
-  <a href="./student/entry.html"><img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-student.png" alt="大学生はこちら"></a>
-  <a href="./family/entry.html"><img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-family.png" alt="ご家族の方はこちら"></a>
+  <a href="./student/entry.html">
+    <img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-student.png" alt="大学生はこちら">
+  </a>
+  <a href="./family/entry.html">
+    <img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-family.png" alt="ご家族の方はこちら">
+  </a>
 </section>
+
+<!-- manma blog RSS Feed -->
+<section id="manma_rss_feed" class="bg-color-cream">
+  <?php
+    include_once(ABSPATH . WPINC . '/feed.php');
+    $rss = fetch_feed('http://manma.co/blog/feed/');     // RSSのURLを指定
+    if (!is_wp_error( $rss ) ) :
+    		$maxitems = $rss->get_item_quantity(5); // 表示する記事の最大件数
+    	$rss_items = $rss->get_items(0, $maxitems);
+    endif;
+  ?>
+  <table>
+    <caption><h4>News Topics</h4></caption>
+    <?php
+      if ($maxitems == 0): echo '<tr><th scope="row"></th><td>更新情報がありません</td></tr>';
+      else : date_default_timezone_set('Asia/Tokyo');
+    ?>
+    <?php foreach ( $rss_items as $item ) : ?>
+    <tr>
+      <th scope="row"><span class="entry-date published"><?php echo $item->get_date('Y.n.j'); ?></span></th>
+      <td class="hentry">
+        <a href="<?php echo $item->get_permalink(); ?>" rel="bookmark" target="_blank">
+          <span class="entry-title"><?php echo $item->get_title(); ?></span>
+        </a>
+      </td>
+    </tr>
+    <?php endforeach; ?>
+    <?php endif; ?>
+  </table>
+</section>
+
+<!-- About -->
 <section id="about" class="about section text-center bg-color-cream">
   <div class="container">
     <div class="section-header">
@@ -32,11 +72,13 @@
     <img src="<?php echo get_template_directory_uri(); ?>/image/index/about/about.png" alt="">
   </div>
 </section>
+
 <section id="flow" class="flow section text-center">
   <div class="container">
     <img src="<?php echo get_template_directory_uri(); ?>/image/index/flow/flow.png" alt="家族留学の流れ">
   </div>
 </section>
+
 <section id="media" class="section bg-color-cream">
   <div class="container">
     <div class="section-header">

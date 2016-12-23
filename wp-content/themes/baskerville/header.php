@@ -14,33 +14,117 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-
-<header id="header" class="header header-right header-color sticky-header translucent-header">
-      <div class="container">
-        <div class="row header-inner">
-          <div id="logo" class="col-xs-6 col-sm-12 col-md-3 image-center-sm text-left-xs clearfix">
-            <a class="logo" href="/">
-              <img id="header_logo" src="./image/logo/logo.png" srcset="./image/logo/logo.png 1x, ./image/logo/logo@2x.png 2x" alt="manma">
-            </a>
-            <a class="logo-translucent" href="/">
-              <img id="header_logo" src="./image/logo/logo.png" srcset="./image/logo/logo.png 1x, ./image/logo/logo@2x.png 2x" alt="manma">
-            </a>
-          </div>
-          <div id="menu" class="col-xs-6 col-sm-12 col-md-9">
-            <nav class="navbar main-menu margin-0" role="navigation">
-              <div class="navbar-header">
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" type="button">MENU</button>
-              </div>
-              <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-right navbar-nav">
-                  <li><a href="http://manma.co/media.html">MEDIA<br>メディア掲載一覧</a></li>
-                  <li><a href="http://manma.co/team.html">TEAM<br>スタッフ一覧</a></li>
-                  <li><a href="http://manma.co/blog/">BLOG<br>家族留学レポート</a></li>
-                  <li><a href="http://manma.co/recruit.html">RECRUIT<br>スタッフ募集</a></li>
-                  <li class="hide-xs"><a class="action-btn" href="http://manma.co/contact.html" target="_blank"><button class="button btn">CONTACT<br>お問い合わせ</button></a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </header>
+	
+		<div class="header section small-padding bg-dark bg-image" style="background-image: url(<?php if (get_header_image() != '') : ?><?php header_image(); ?><?php else : ?><?php echo get_template_directory_uri() . '/images/header.jpg'; ?><?php endif; ?>);">
+		
+			<div class="cover"></div>
+			
+			<div class="header-search-block bg-graphite hidden">
+			
+				<?php get_search_form(); ?>
+			
+			</div> <!-- /header-search-block -->
+					
+			<div class="header-inner section-inner">
+			
+				<?php if ( get_theme_mod( 'baskerville_logo' ) ) : ?>
+				
+					<div class="blog-logo">
+					
+				        <a class="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>' rel='home'>
+				        	<img src='<?php echo esc_url( get_theme_mod( 'baskerville_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>'>
+				        </a>
+			        
+					</div>
+			
+				<?php elseif ( get_bloginfo( 'description' ) || get_bloginfo( 'title' ) ) : ?>
+								
+						<h1 class="blog-title">
+							<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a>
+						</h1>
+						
+						<?php if ( get_bloginfo( 'description' ) ) { ?>
+						
+							<h3 class="blog-description"><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></h3>
+							
+						<?php } ?>
+										
+				<?php endif; ?>
+							
+			</div> <!-- /header-inner -->
+						
+		</div> <!-- /header -->
+		
+		<div class="navigation section no-padding bg-dark">
+		
+			<div class="navigation-inner section-inner">
+			
+				<div class="nav-toggle fleft hidden">
+					
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					
+					<div class="clear"></div>
+					
+				</div>
+						
+				<ul class="main-menu">
+				
+					<?php if ( has_nav_menu( 'primary' ) ) {
+																		
+						wp_nav_menu( array( 
+						
+							'container' => '', 
+							'items_wrap' => '%3$s',
+							'theme_location' => 'primary', 
+							'walker' => new baskerville_nav_walker
+														
+						) ); } else {
+					
+						wp_list_pages( array(
+						
+							'container' => '',
+							'title_li' => ''
+						
+						));
+						
+					} ?>
+											
+				 </ul> <!-- /main-menu -->
+				 
+				 <a class="search-toggle fright" href="#"></a>
+				 
+				 <div class="clear"></div>
+				 
+			</div> <!-- /navigation-inner -->
+			
+		</div> <!-- /navigation -->
+		
+		<div class="mobile-navigation section bg-graphite no-padding hidden">
+					
+			<ul class="mobile-menu">
+			
+				<?php if ( has_nav_menu( 'primary' ) ) {
+																	
+					wp_nav_menu( array( 
+					
+						'container' => '', 
+						'items_wrap' => '%3$s',
+						'theme_location' => 'primary', 
+						'walker' => new baskerville_nav_walker
+													
+					) ); } else {
+				
+					wp_list_pages( array(
+					
+						'container' => '',
+						'title_li' => ''
+					
+					));
+					
+				} ?>
+										
+			 </ul> <!-- /main-menu -->
+		
+		</div> <!-- /mobile-navigation -->

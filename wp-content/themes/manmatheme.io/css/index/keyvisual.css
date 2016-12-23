@@ -20,7 +20,7 @@
 }
 
 .keyvisual-text, .subkeyvisual-text {
-  padding-top: 20%;
+  padding-top: 15%;
 }
 
 .subkeyvisual-text img {
@@ -43,6 +43,8 @@
   .keyvisual img {
     padding-right: 5%;
     padding-left: 5%;
+    max-width: 100%;
+    height: auto;
   }
 
   .subkeyvisual-text {

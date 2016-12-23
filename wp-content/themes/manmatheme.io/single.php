@@ -14,8 +14,8 @@ endif;
 <div class="col-full">
   <div class="wrap-col">
     <div class="related_post">
-    <h1>関連記事</h1>
-    <?php get_template_part('single_related'); ?>
+    <!-- <h1>関連記事</h1> -->
+    <!-- <?php get_template_part('single_related'); ?> -->
     </div><!-- ^ .related_post END-->
   </div><!-- ^ .wrap-col END-->
 </div><!-- ^ .col-full END-->

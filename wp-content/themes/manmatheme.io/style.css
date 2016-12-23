@@ -25,6 +25,7 @@ License URI: manma.co
 @import "css/common/subpage.css";
 
 @import "css/index/keyvisual.css";
+@import "css/index/manma_rss_feed.css";
 @import "css/index/entry.css";
 @import "css/index/media.css";
 @import "css/index/voice.css";
@@ -34,7 +35,8 @@ License URI: manma.co
 
 @import "css/team/staff.css";
 @import "css/team/leader.css";
-@import "css/team/team.css";
 
 @import "css/recruit/recruit.css";
 @import "css/recruit/details.css";
+@import "css/recruit/culture.css";
+@import "css/recruit/process.css";

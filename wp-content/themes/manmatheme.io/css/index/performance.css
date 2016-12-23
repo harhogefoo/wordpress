@@ -17,8 +17,8 @@
   padding-bottom: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   .performance-box {
-    margin-top: 5%;
+    margin-bottom: 3%;
   }
 }

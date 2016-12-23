@@ -2,10 +2,17 @@
   padding: 2%;
 }
 
-.entry h4 {
+.entry h4, .entry p {
   color: #89e2b3;
 }
 
 .entry-btn {
   padding: 1%;
+}
+
+@media screen and (max-width: 640px) {
+  .entry-section {
+      padding-top: 5%;
+      padding-bottom: 5%;
+  }
 }
