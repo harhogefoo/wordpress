@@ -30,9 +30,12 @@
         endif;
         ?>
         <?php if( get_post_meta($post->ID, 'link', true) ) { ?>
-        関連記事: <a href="<?php echo get_post_meta($post->ID, 'link', true); ?>">
-         <?php echo get_post_meta($post->ID, 'link', true); ?></a>
-         <?php } ?>
+        <p style="word-break:break-all;">関連記事<br />
+          <a href="<?php echo get_post_meta($post->ID, 'link', true); ?>">
+            <?php echo get_post_meta($post->ID, 'link', true); ?>
+          </a>
+        </p>
+        <?php } ?>
         </div>
       </div>
     </section>
