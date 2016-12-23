@@ -18,7 +18,7 @@
       <?php
         $wp_queyr = new WP_Query();
         $param = array(
-          "posts_per_page" => "10",   // 表示件数 -1 なら全件表示
+          "posts_per_page" => "1",   // 表示件数 -1 なら全件表示
           "post_type" => "medias",    // カスタム投稿タイプの名称
           "post_status" => "publish", // 取得するステータス．publishなら一般公開のもののみ
           "orderby" => "date",        // 日付順に並び替え
@@ -51,6 +51,7 @@
       <!-- posted contents -->
 
     </div>
+    <?php wp_pagenavi(); ?>
   </div>
 </section>
 <!--------------RelatedPostLinks--------------->

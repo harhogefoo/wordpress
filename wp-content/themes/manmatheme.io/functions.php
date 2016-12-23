@@ -37,4 +37,18 @@ function create_post_type() {
 add_theme_support( 'post-thumbnails', array( 'medias' ) );
 // サムネイル画像を指定の値で切り抜く
 // set_post_thubnail_size( 150, 150, true );
+
+
+// カスタムポストacv
+function change_posts_per_page($query) {
+  if ( is_admin() || ! $query->is_main_query() )
+    return;
+
+  // medias向け設定
+  if ( $query->is_post_type_archive('medias') ) {
+    $query->set( 'posts_per_page', 10 );
+  }
+}
+
+add_action( 'pre_get_posts', 'change_posts_per_page' );
 ?>
