@@ -46,7 +46,7 @@ function change_posts_per_page($query) {
 
   // medias向け設定
   if ( $query->is_post_type_archive('medias') ) {
-    $query->set( 'posts_per_page', 10 );
+    $query->set( 'posts_per_page', 1 );
   }
 }
 
