@@ -25,6 +25,7 @@ License URI: manma.co
 @import "css/common/subpage.css";
 
 @import "css/index/keyvisual.css";
+@import "css/index/manma_rss_feed.css";
 @import "css/index/entry.css";
 @import "css/index/media.css";
 @import "css/index/voice.css";
