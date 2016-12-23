@@ -1,5 +1,6 @@
 <!-- メディア掲載一覧ページ -->
-<?php get_header();?>
+<?php get_header(); ?>
+
 <!--------------MainContent--------------->
 <article id="main-content">
 <div class="grid"><!-- GRID MOTHER -->
@@ -15,17 +16,21 @@
 
       <!-- posted contents -->
       <?php
-        $loop = new WP_Query(array("post_type" => "medias"));
+        $wp_queyr = new WP_Query();
+        $param = array(
+          "posts_per_page" => "10",   // 表示件数 -1 なら全件表示
+          "post_type" => "medias",    // カスタム投稿タイプの名称
+          "post_status" => "publish", // 取得するステータス．publishなら一般公開のもののみ
+          "orderby" => "date",        // 日付順に並び替え
+          "order" => "DESC",
+          "paged" => $paged
+        );
+        $wp_query->query($param);
+        $loop = $wp_query;
         if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
       ?>
       <div class="media-col col-lg-3 media-wrapper">
-        <a href="
-        <?php
-          if( get_post_meta($post->ID, 'link', true) ) {
-            echo get_post_meta($post->ID, 'link', true);
-          }
-        ?>
-        " target="_blank">
+        <a href="<?php echo the_permalink(); ?>">
           <div class="media-box box-shadow">
             <?php the_post_thumbnail(); ?>
             <!-- start date -->
