@@ -46,7 +46,7 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-right navbar-nav">
-                <li><a href="<?php echo get_site_url(); ?>/media/">MEDIA<br>メディア掲載一覧</a></li>
+                <li><a href="<?php echo get_site_url(); ?>/medias/">MEDIA<br>メディア掲載一覧</a></li>
                 <li><a href="<?php echo get_site_url(); ?>/team/">TEAM<br>スタッフ一覧</a></li>
                 <li><a href="http://manma.co/blog/" target="_blank">BLOG<br>家族留学レポート</a></li>
                 <li><a href="<?php echo get_site_url(); ?>/recruit/">RECRUIT<br>スタッフ募集</a></li>
