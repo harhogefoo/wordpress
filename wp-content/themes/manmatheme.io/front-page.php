@@ -4,7 +4,7 @@
 <section id="keyvisual" class="keyvisual section keyvisual-main">
     <div class="col-md-10 col-md-offset-1 text-center">
       <div class="keyvisual-text padding-bottom-20">
-        <img class="img padding-center" src="<?php echo get_template_directory_uri(); ?>/image/index/keyvisual/keyvisual.png" alt="">
+        <img class="img padding-center" src="http://192.168.33.10/wp-content/themes/manmatheme.io/image/index/keyvisual/keyvisual.png" alt="">
       </div>
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
@@ -69,6 +69,7 @@
     <div class="section-header">
       <img src="<?php echo get_template_directory_uri(); ?>/image/index/title/title-about.png" alt="about">
     </div>
+    <img src="<?php echo get_template_directory_uri(); ?>/image/index/about/about-kazokuryugaku.png" alt="">
     <img src="<?php echo get_template_directory_uri(); ?>/image/index/about/about.png" alt="">
   </div>
 </section>
@@ -144,37 +145,28 @@
     </div>
   </div>
 </section>
-<section id="entry" class="entry entry-section text-center">
-  <h4>家族留学の新規登録</h4>
-  <a href="./student/entry.html"><img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-student.png" alt="大学生はこちら"></a>
-  <a href="./family/entry.html"><img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-family.png" alt="ご家族の方はこちら"></a>
-</section>
 <section id="voice" class="voice section">
   <div class="container">
     <div class="section-header">
       <img src="<?php echo get_template_directory_uri(); ?>/image/index/title/title-report.png" alt="report">
     </div>
     <div class="movie-content">
-      <tr>
-        <td>
-        <center>
-          <div class="movie-box">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2tzBK7F0gbw?rel=0&modestbranding=0&showinfo=0&fs=0&controls=1&autohide=1" frameborder="0" allowfullscreen>
-            </iframe>
-            <h5>2016/06 家族留学のようす</h5>
-            <p>長男の茶利くんと一緒に遊んだり、オムツ替え体験をしました。<br>ママさんパパさんのお話を聞くだけでなく、子どもと触れ合う楽しさに出会える時間にも出会えます。</p>
-            <h6><span class="tag">ご協力</span>坂下さん(獨協大学1年) | 宇野さん(信州大学4年) | 亀山さんご夫妻</h6>
-          </div>
-          <div class="movie-box">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Wa1DaeIry80?rel=0&modestbranding=0&showinfo=0&fs=0&controls=1&autohide=1" frameborder="0" allowfullscreen frameborder="0" allowfullscreen>
-            </iframe>
-            <h5>2016/06 家族留学のようす</h5>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5 class="text-center">＼育休中ママさんと話せます／</h5>
+            <div class="movie-box">
+              <iframe src="https://www.youtube.com/embed/2tzBK7F0gbw?rel=0&modestbranding=0&showinfo=0&fs=0&controls=1&autohide=1" frameborder="0" allowfullscreen></iframe>
+            </div>
             <p>2人のご兄弟と一緒に公園へ。男の子の遊び相手は男の子の方が喜ばれることもあります。<br>大学生だけでなく、社会人や男性の方の参加も歓迎しています。</p>
-            <h6><span class="tag">ご協力</span>松浦さん(関西学院大学卒社会人1年目) | 高田さん(神戸大学卒社会人1年目) | 福家さんご夫妻</h6>
+        </div>
+        <div class="col-sm-6">
+          <h5 class="text-center">＼社会人,男性の参加も大歓迎／</h5>
+          <div class="movie-box">
+            <iframe src="https://www.youtube.com/embed/Wa1DaeIry80?rel=0&modestbranding=0&showinfo=0&fs=0&controls=1&autohide=1" frameborder="0" allowfullscreen frameborder="0" allowfullscreen></iframe>
           </div>
-        </center>
-        </td>
-      </tr>
+          <p>2人のご兄弟と一緒に公園へ。男の子の遊び相手は男の子の方が喜ばれることもあります。<br>大学生だけでなく、社会人や男性の方の参加も歓迎しています。</p>
+        </div>
+      </div>
     </div>
     <div class="voice-content">
       <div class="row">
