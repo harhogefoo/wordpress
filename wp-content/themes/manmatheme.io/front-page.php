@@ -25,6 +25,7 @@
 <!-- 家族留学の新規登録 -->
 <section id="entry" class="entry entry-section text-center">
   <h4>manma会員の新規登録</h4>
+  <p>家族留学やイベント実施などのお知らせをいたします</p>
   <a href="/student/">
     <img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-student.png" alt="大学生はこちら">
   </a>
@@ -45,7 +46,7 @@
     endif;
   ?>
   <table>
-    <caption><h4>News Topics</h4></caption>
+    <caption><h4>New Contents</h4></caption>
     <?php
       if ($maxitems == 0): echo '<tr><th scope="row"></th><td>更新情報がありません</td></tr>';
       else : date_default_timezone_set('Asia/Tokyo');
