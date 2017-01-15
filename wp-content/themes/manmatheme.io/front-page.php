@@ -24,11 +24,11 @@
 
 <!-- 家族留学の新規登録 -->
 <section id="entry" class="entry entry-section text-center">
-  <h4>家族留学の新規登録</h4>
-  <a href="./student/entry.html">
+  <h4>manma会員の新規登録</h4>
+  <a href="/student/">
     <img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-student.png" alt="大学生はこちら">
   </a>
-  <a href="./family/entry.html">
+  <a href="/family/">
     <img class="entry-btn" src="<?php echo get_template_directory_uri(); ?>/image/button/button-family.png" alt="ご家族の方はこちら">
   </a>
 </section>
@@ -37,10 +37,11 @@
 <section id="manma_rss_feed" class="bg-color-cream">
   <?php
     include_once(ABSPATH . WPINC . '/feed.php');
-    $rss = fetch_feed('http://manma.co/blog/feed/');     // RSSのURLを指定
+    $rss = fetch_feed('http://manma.raindrop.jp/blog/feed/');     // RSSのURLを指定
+    $maxitems = 0;
     if (!is_wp_error( $rss ) ) :
-    		$maxitems = $rss->get_item_quantity(5); // 表示する記事の最大件数
-    	$rss_items = $rss->get_items(0, $maxitems);
+      $maxitems = $rss->get_item_quantity(5); // 表示する記事の最大件数
+      $rss_items = $rss->get_items(0, $maxitems);
     endif;
   ?>
   <table>
@@ -250,7 +251,7 @@
           </div>
           <div class="qa-item">
             <h4>Q：費用はかかりますか？</h4>
-            <p>登録費として1000円、保険費で500円を頂いております。登録時の初回マッチングに限り、登録費の1000円で2家庭までご参加いただけます。その後追加で参加する場合は参加費として1回につき1000円をお支払いいただきます。また、受け入れご家庭の方と食事をした場合は食事代として500円お支払いください。</p>
+            <p>登録費は無料です。参加費（保険料含む）として、学生1,500円、社会人の方は3,000円をいただいております。また、受け入れご家庭の方と食事をした場合は食事代として500円お支払いください。</p>
           </div>
           <div class="qa-item">
             <h4>Q：当日までに準備するものはありますか？</h4>
