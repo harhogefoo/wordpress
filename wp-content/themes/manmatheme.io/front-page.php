@@ -38,12 +38,17 @@
 <section id="manma_rss_feed" class="bg-color-cream">
   <?php
     include_once(ABSPATH . WPINC . '/feed.php');
-    $rss = fetch_feed('http://manma.raindrop.jp/blog/feed/');     // RSSのURLを指定
+    $rss = fetch_feed('http://manma.co/blog/feed/');     // RSSのURLを指定
+    // $rss = fetch_feed('http://news.yahoo.co.jp/pickup/entertainment/rss.xml');     // RSSのURLを指定
     $maxitems = 0;
     if (!is_wp_error( $rss ) ) :
       $maxitems = $rss->get_item_quantity(5); // 表示する記事の最大件数
       $rss_items = $rss->get_items(0, $maxitems);
+    else :
+      echo $rss-> get_error_code();
+      echo $rss-> get_error_message();
     endif;
+
   ?>
   <table>
     <caption><h4>New Contents</h4></caption>
