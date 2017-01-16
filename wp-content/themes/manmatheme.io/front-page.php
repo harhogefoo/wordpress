@@ -45,10 +45,9 @@
       $maxitems = $rss->get_item_quantity(5); // 表示する記事の最大件数
       $rss_items = $rss->get_items(0, $maxitems);
     else :
-      echo $rss-> get_error_code();
-      echo $rss-> get_error_message();
+      //echo $rss-> get_error_code();
+      //echo $rss-> get_error_message();
     endif;
-
   ?>
   <table>
     <caption><h4>New Contents</h4></caption>
