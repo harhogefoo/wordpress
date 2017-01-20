@@ -4,7 +4,7 @@
 <section id="keyvisual" class="keyvisual section keyvisual-main">
     <div class="col-md-10 col-md-offset-1 text-center">
       <div class="keyvisual-text padding-bottom-20">
-        <img class="img padding-center" src="http://192.168.33.10/wp-content/themes/manmatheme.io/image/index/keyvisual/keyvisual.png" alt="">
+        <img class="img padding-center" src="http://manma.co/wp-content/themes/manmatheme.io/image/index/keyvisual/keyvisual.png" alt="">
       </div>
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
